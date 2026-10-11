@@ -11,7 +11,7 @@ fun main(){
     println(startsWithVowel("apple"))
     println(startsWithVowel("Banana"))
     println(startsWithVowel("orange"))
-    //3. Lambda that
+    //3. Lambda that takes two Int values and return the larger one.
     val largerOne: (Int, Int) -> Int = {a,b -> if(a>b) a else b}
     println(largerOne(12, 7))
 }

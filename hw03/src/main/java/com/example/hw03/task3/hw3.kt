@@ -1,5 +1,5 @@
 package com.example.hw03.task3
-fun main() {
+fun main(){
     val studentName: String? = null
     println("Length: ${studentName?.length}")
     println("Name: ${studentName?: "Unknown"}")

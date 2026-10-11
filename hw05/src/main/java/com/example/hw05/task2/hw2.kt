@@ -4,6 +4,7 @@ val startsWithVowel: (String) -> Boolean = {str ->
     val firstChar = str.firstOrNull()?.lowercaseChar()
     firstChar in setOf('a','i','u','e','o')
 }
+//1. applyTwice function
 fun applyTwice(n: Int, operation: (Int) -> Int): Int {
     return operation(operation(n))
 }
@@ -24,18 +25,14 @@ fun <T> transform(list: List<T>, mapper: (T) -> String): List<String> {
     return result
 }
 fun main() {
-    // --- Test Task 1 ---
     val doubleResult = applyTwice(3, double)
-    println("applyTwice(3, double) = $doubleResult") // Output: 12[cite: 1]
+    println("applyTwice(3, double) = $doubleResult")
 
-    // --- Test Task 2 ---
     val courses = listOf("Algebra", "Biology", "Chemistry", "English", "Physics")
-    println("\nCourses starting with a vowel:")
+    println("Courses starting with a vowel:")
     printIf(courses, startsWithVowel)
-    // Output: Algebra, English
 
-    // --- Test Task 3 ---
     val numbers = listOf(2, 3, 4)
     val squaredStrings = transform(numbers) { it -> (it * it).toString() }
-    println("\nSquared strings: $squaredStrings") // Output: [4, 9, 16][cite: 1]
+    println("Squared strings: $squaredStrings")
 }

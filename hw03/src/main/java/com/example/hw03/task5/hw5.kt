@@ -5,13 +5,13 @@ abstract class SmartDevice(val name: String){
         println(name)
     }
 }
-interface Connectable {
+interface Connectable{
     fun connect()
 }
-interface Rechargeable {
+interface Rechargeable{
     fun charge()
 }
-class SmartWatch(name: String) : SmartDevice(name), Connectable, Rechargeable {
+class SmartWatch(name: String) : SmartDevice(name), Connectable, Rechargeable{
     private var battery: Int = 50
         set(value) {
             field = when {
